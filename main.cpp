@@ -1,5 +1,3 @@
-#include “dz1.h”
-
 #include "dz1.h"
 
 int main(int argc, char** argv) {
