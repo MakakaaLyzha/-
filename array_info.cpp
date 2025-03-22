@@ -59,3 +59,34 @@ struct CountNum GetStatNumber(const int* ar, int size) {
 
 //jjjjjjjjjjjjjj
 void foo() {}
+
+//2 ver create adress 
+
+//#include "array_info.h"
+#include <cstdlib> 
+#include <ctime>   
+
+int* CreateAr(int size) {
+    return new int[size]; 
+
+
+int* CreateAr(int size, int number) {
+    int* array = new int[size]; 
+    for (int i = 0; i < size; ++i) {
+        array[i] = number; 
+    }
+    return array; 
+}
+
+int* CreateAr(int size, int min, int max) {
+    int* array = new int[size]; 
+    std::srand(std::time(0)); 
+    for (int i = 0; i < size; ++i) {
+        array[i] = min + std::rand() % (max - min + 1); 
+    return array; 
+}
+int* myArray = CreateAr(5);
+
+delete[] myArray;
+}
+
