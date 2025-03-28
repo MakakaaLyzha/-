@@ -65,7 +65,7 @@ struct MinMax GetMaxMin(const int* ar, int size) {
     return result;
 }
 
-// Функция для подсчета положительных, отрицательных чисел и нулей
+
 struct CountNum GetStatNumber(const int* ar, int size) {
     struct CountNum result = {0, 0, 0};
     if (size <= 0 || ar == nullptr) return result;
